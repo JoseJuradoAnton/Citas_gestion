@@ -56,10 +56,10 @@ const Formulario = ({ crearCita }) => {
 
     return (
         <Fragment>
-            <div className="">
+            <div className='form_Citas'>
                 <h2 className='form_title'>Crear Cita</h2>
 
-                {error ? <p> Todos los datos deben estar completos </p> : null}
+                {error ? <p className='error_cita'> Todos los datos deben estar completos </p> : null}
 
                 <form onSubmit={submitCita}>
                     <label>Nombre Mascota</label>

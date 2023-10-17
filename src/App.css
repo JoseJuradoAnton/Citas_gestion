@@ -13,6 +13,13 @@ padding-bottom: 5rem;
 
 .one-half{
 width: 40%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.form_Citas{
+width: 80%;
 }
 
 .row{
@@ -27,12 +34,10 @@ form {
 }
 
  p {
-   color: #d07878;
+   color: #fff;
    font-weight: 600;
-   height: 60px;
-   width: 280px;
-   text-align: center;
-   margin-left: 85px;
+   height: 5px;
+   margin-left: 100px;
    
 }
 
@@ -50,7 +55,7 @@ padding: 7px;
 }
 
 
-h1, h2 {
+.u-full-width h1, h2 {
     margin-left: 10%;
     color: white;
     text-align: center;
@@ -58,6 +63,15 @@ h1, h2 {
     font-family: 'Staatliches', cursive;
     letter-spacing: 1px;
 }
+
+.error_cita{
+color: #FF0066;
+height: 5%;
+
+display: flex;
+justify-content: center;
+}
+
  button {
     border-radius: 5px;
     height: 40px;
@@ -73,11 +87,18 @@ h1, h2 {
 button:hover {
     background-color:  #5c8cc3;
 }
-.listas-citas .media {
-    border-bottom: 1px solid #e1e1e1;
-    padding-bottom: 3rem;
-}
 
  span {
     font-weight: 50;
+}
+
+.one-half .media{
+    background-color: #59649c;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+padding: 5px;
+margin: 1%;
+    
 }
