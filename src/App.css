@@ -6,9 +6,13 @@ body{
 margin: 0;
 padding: 0;
 font-family: sans-serif;
-background: linear-gradient(-255deg, #A445B2 0% #D41872 52%,#FF0066 100%);
+background: linear-gradient(-255deg, #4597b2 0% #51aa92e6 52%,#FF0066 100%);
 min-height: 100%;
 padding-bottom: 5rem;
+}
+
+.form_title {
+    width: 35%;
 }
 
 .formulario {
@@ -43,7 +47,6 @@ padding: 7px;
 h1, h2 {
     margin-left: 10%;
     color: white;
-    padding: 2rem 0;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Staatliches', cursive;
@@ -54,11 +57,7 @@ h1, h2 {
     padding-bottom: 3rem;
 }
 
-.cita {
-    background: #fff;
-    border-radius: 10px;
-    margin: 20px;
-}
+
 
 .cita p {
   margin: 0px 0px 0px 10px;
@@ -69,13 +68,18 @@ h1, h2 {
 .cita span {
     font-weight: 50;
 }
-.cita button {
-    background-color: #FF0066;
+
+.formulario button {
+    background-color: #59bdde;
     color: #fff;
-    width: 95%;
-    margin: 5px;
+    width: 300px;
+    padding: 10px;
+    height: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
-.cita button:hover {
-    background-color: #D41872;
+.formulario button:hover {
+    background-color:  #19a6d6;
 }
