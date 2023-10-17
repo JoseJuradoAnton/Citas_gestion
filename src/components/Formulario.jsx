@@ -33,15 +33,30 @@ const Formulario = ({ crearCita }) => {
             setError(true)
             return
         }
+
+        //Borrar banner Error
         setError(false);
+
+        //Crear
         cita.id = uuidv4();
 
+        //Crear Cita
         crearCita(cita)
+
+        //Limpiar Datos
+        setCita({
+            mascota: '',
+            propietario: '',
+            fecha: '',
+            hora: '',
+            sintomas: ''
+        })
+
     }
 
     return (
         <Fragment>
-            <div className="formulario">
+            <div className="">
                 <h2 className='form_title'>Crear Cita</h2>
 
                 {error ? <p> Todos los datos deben estar completos </p> : null}

@@ -11,18 +11,19 @@ min-height: 100%;
 padding-bottom: 5rem;
 }
 
-.form_title {
-    width: 35%;
+.one-half{
+width: 40%;
 }
 
-
+.row{
+display: flex;
+justify-content: space-evenly;
+}
 
 form {
     display: flex;
     flex-direction: column;
-    width: 50%;
     justify-content: center;
-    margin-left: 10%;
 }
 
  p {
@@ -42,7 +43,6 @@ padding: 7px;
 
 .u-full-width {
     border-radius: 5px;
-    width: 70%;
     height: 30px;
     font-size: 15px;
     font-weight: 500;
@@ -60,7 +60,6 @@ h1, h2 {
 }
  button {
     border-radius: 5px;
-    width: 73%;
     height: 40px;
     font-size: 15px;
     font-weight: 500;
