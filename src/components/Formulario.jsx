@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
-const Formulario = () => {
+const Formulario = ({ crearCita }) => {
 
     //Crear State de Citas
     const [cita, setCita] = useState({
@@ -10,6 +11,8 @@ const Formulario = () => {
         hora: '',
         sintomas: ''
     })
+
+    const [error, setError] = useState(false)
 
     //Funcion que captura datos de input
     const actualizarState = e => {
@@ -24,16 +27,24 @@ const Formulario = () => {
 
     const submitCita = e => {
         e.preventDefault();
+
         if (mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' || hora.trim() === '' || sintomas.trim() === '') {
-            console.log('datos vacios !!!')
+
+            setError(true)
             return
         }
+        setError(false);
+        cita.id = uuidv4();
+
+        crearCita(cita)
     }
 
     return (
         <Fragment>
             <div className="formulario">
                 <h2 className='form_title'>Crear Cita</h2>
+
+                {error ? <p> Todos los datos deben estar completos </p> : null}
 
                 <form onSubmit={submitCita}>
                     <label>Nombre Mascota</label>
@@ -82,7 +93,7 @@ const Formulario = () => {
                         value={sintomas}
 
                     ></textarea>
-                    <button className='btm-form'>Registrar</button>
+                    <button>Registrar</button>
                 </form>
             </div>
         </Fragment>
